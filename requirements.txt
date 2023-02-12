@@ -57,3 +57,4 @@ wcwidth==0.2.6
 zipp==3.12.1
 streamlit==1.15.2
 streamlit-folium==0.7.0
+inflection==0.5.1
