@@ -29,7 +29,7 @@ with st.container():
         st.header('pinPop! seu restaurante pelo mundo!')
 
 st.sidebar.subheader('Países')
-countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['India', 'Australia', 'Brazil', 'Canada', 'England'])
+countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['India', 'Australia', 'Brazil', 'Canada', 'England', 'United States of America'])
 
 st.sidebar.markdown("""---""")
 st.sidebar.title('Dados tratados')
@@ -56,7 +56,10 @@ df = df.loc[(df['country_code'].isin(countries)), :]
 # layout
 # -----------------
 with st.container():
+    image = Image.open('./img/restaurante.png')
+    st.image(image, width=100)
     st.title('pinPop!')
+           
     st.subheader('seu restaurante pelo mundo')
     st.write('Veja abaixo alguns dados de nossas plataforma:')
     

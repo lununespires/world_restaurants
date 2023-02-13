@@ -13,7 +13,7 @@ st.set_page_config(page_title='Countries', layout="wide")
 # Sidebar
 # -----------------
 st.sidebar.subheader('Países')
-countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['India', 'Australia', 'Brazil', 'Canada', 'England'])
+countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['India', 'United States of America', 'Australia', 'Brazil', 'Canada', 'England'])
 
 # -----------------
 # Filter
@@ -26,13 +26,20 @@ df = df.loc[(df['country_code'].isin(countries)), :]
 # -----------------
 with st.container():
     st.markdown('# :earth_americas: Visão Países')
+    st.markdown('##### Quantidade de Restaurantes Registrados por País')
     df_rest = df[['country_code', 'restaurant_id']].groupby(['country_code']).count().sort_values('restaurant_id', ascending=False).reset_index()
+    col1, col2 = st.columns(2)
+    with col1:
+        fig = px.bar(df_rest, x = 'country_code', y='restaurant_id', text='restaurant_id', labels={
+                'country_code': 'Paises',
+                'restaurant_id': 'Quantidade de Restaurantes',
+            },)
+        st.plotly_chart(fig, use_container_width=True)
     
-    fig = px.bar(df_rest, x = 'country_code', y='restaurant_id', text='restaurant_id', title='Quantidade de Restaurantes Registrados por País',    labels={
-            'country_code': 'Paises',
-            'restaurant_id': 'Quantidade de Restaurantes',
-        },)
-    st.plotly_chart(fig, use_container_width=True)
+    with col2:
+        fig = px.pie(df_rest, names='country_code', values='restaurant_id', color='country_code')
+        st.plotly_chart(fig, use_container_width=True)
+
 
     df_cities = df[['country_code', 'city']].groupby(['country_code']).nunique().sort_values('city', ascending=False).reset_index()
     fig = px.bar(df_cities, x = 'country_code', y='city', text='city', title='Quantidade de cidades por País',    labels={

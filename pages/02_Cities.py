@@ -19,7 +19,7 @@ slider_range = st.sidebar.slider('Valores entre:', 0, 4, 4)
 st.sidebar.write('###### 1 = barato / 2 = normal / 3 = caro / 4 = gourmet')
 
 st.sidebar.subheader('Países')
-countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['Australia', 'Brazil', 'Canada', 'England'])
+countries = st.sidebar.multiselect('Escolhe os paises que deseja visualizar os dados', df.loc[:, 'country_code'].unique().tolist(), ['Australia', 'Brazil', 'Canada', 'England', 'India', 'United States of America'])
 
 # -----------------
 # Filter
