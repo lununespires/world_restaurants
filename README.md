@@ -1,5 +1,4 @@
-<span style="display:block;text-align:center">
-![alt text](./img/pinPop.png)</span>
+![alt text](./img/restaurante.png)
 # 1.Introducao e o problema de negocio
 
 A pinPop é um marketplace ficticio de restaurantes, onde atraves de um aplicativo conecta restaurantes, entregadores e clientes.
@@ -45,6 +44,9 @@ A partir dai os dados foram agrupados e demonstrados, sendo divididos em:
 
 # 5.Conclusao
 O projeto foi capaz de aprensentar de forma clara o cenario do pinPop atraves de graficos e/ou tabelas que exibem a realidade no periodo compreendido quando da coleta de dados, propiciando ao CEO da empresa uma visao ampla e analitica para tomadas de decisao.
+
+![alt text](./img/newplot_countries.png)
+![alt text](./img/barplot_restaurants.png)
 
 
 # 6.Proximos Passos
