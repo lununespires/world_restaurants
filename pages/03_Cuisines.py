@@ -57,7 +57,7 @@ with st.container():
     
     with col2:
         fig = go.Figure(data=[go.Pie(labels=df_top['cuisines'].head(slider_range), values=df_top['aggregate_rating'].head(slider_range), title="Tipo de culinaria dos Top restaurantes em percentual", pull=[0, 0.2, 0])])
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=False)
 
     col1, col2 = st.columns(2)
 
