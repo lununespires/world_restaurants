@@ -1,4 +1,4 @@
-![alt text](./img/pinPop.png)
+![alt text](./img/restaurante.png)
 # 1.Introducao e o problema de negocio
 
 A pinPop é um marketplace ficticio de restaurantes, onde atraves de um aplicativo conecta restaurantes, entregadores e clientes.
