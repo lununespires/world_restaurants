@@ -1,5 +1,5 @@
-![alt text](./img/pinPop.png)
-<span style="display:block;text-align:center"></span>
+<span style="display:block;text-align:center">
+![alt text](./img/pinPop.png)</span>
 # 1.Introducao e o problema de negocio
 
 A pinPop é um marketplace ficticio de restaurantes, onde atraves de um aplicativo conecta restaurantes, entregadores e clientes.
